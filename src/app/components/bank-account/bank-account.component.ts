@@ -3,6 +3,7 @@ import { BankService } from '../../services/bank.service';
 import { Account } from '../../models/account.model';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-bank-account',
@@ -13,6 +14,7 @@ import { Router } from '@angular/router';
 export class BankAccountComponent implements OnInit {
   accounts: Account[] = [];
   selectedAccount: Account | undefined;
+  currentUser: User | null = null;
 
   constructor(
     private bankService: BankService,
@@ -26,6 +28,7 @@ export class BankAccountComponent implements OnInit {
       return;
     }
     this.accounts = this.bankService.getAccounts();
+    this.currentUser = this.authService.getCurrentUser();
   }
 
   selectAccount(id: number) {

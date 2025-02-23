@@ -1,0 +1,73 @@
+body {
+  background: #94cdf7;
+}
+
+:root {
+  --navbar-height: 56px;
+}
+
+nav.navbar {
+  background-color: #00294d;
+}
+
+nav.navbar .navbar-nav .nav-link {
+  color: #cccccc;
+}
+
+nav.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 56px);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 56px;
+}
+
+.account-container {
+  background: #00294d;
+  border-radius: 10px;
+  width: 90%;
+  padding: 20px;
+}
+
+.account-container h2 {
+  color: var(--bs-body-bg);
+  font-family: Prompt, sans-serif;
+  margin-top: 20px;
+  font-size: 34px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.account-item {
+  background: #01427a;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.account-item:hover {
+  background: #003366;
+  cursor: pointer;
+}
+
+.account-details {
+  background: #01427a;
+  color: white;
+}
+
+.account-details-header {
+  background: #00294d;
+}
+
+.account-details-header h3 {
+  color: white;
+}
+
+.rounded-image {
+  border-radius: 50%;
+}

@@ -6,11 +6,20 @@ import { User } from '../models/user.model';
 })
 export class AuthService {
   private loggedIn = false;
+  private currentUser: User | null = null;
+  private users: User[] = [
+    { username: 'staff@bmail.com', password: 'password123' },
+    { username: 'admin', password: 'admin' },
+    { username: 'user', password: 'user' },
+    { username: 'test', password: 'test' }
+  ];
 
   login(user: User): boolean {
-    if (user.username === 'user' && user.password === 'password') {
+    const foundUser = this.users.find(u => u.username === user.username && u.password === user.password);
+    if (foundUser) {
       this.loggedIn = true;
-      return true
+      this.currentUser = foundUser;
+      return true;
     }
     return false;
   }
@@ -21,6 +30,11 @@ export class AuthService {
 
   logout(): void {
     this.loggedIn = false;
+    this.currentUser = null;
+  }
+
+  getCurrentUser(): User | null {
+    return this.currentUser;
   }
 
   constructor() { }
