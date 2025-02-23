@@ -1,19 +1,38 @@
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-<body style="font-family: 'Kanit', sans-serif;">
+<body style="font-family: 'Kanit', sans-serif">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <img src="assets/images/2.webp" alt="Logo" class="rounded-image" style="height: 40px; margin-right: 10px;">
+      <img
+        src="assets/images/2.webp"
+        alt="Logo"
+        class="rounded-image"
+        style="height: 40px; margin-right: 10px"
+      />
       <span class="navbar-brand">บัญชีธนาคาร</span>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item me-4">
-            <span class="nav-link" *ngIf="currentUser">{{ currentUser.username }}</span> </li>
+            <span class="nav-link" *ngIf="currentUser">{{
+              currentUser.username
+            }}</span>
+          </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">ออกจากระบบ</a>
           </li>
@@ -29,12 +48,18 @@
       <div class="row mt-4">
         <div class="col-md-4">
           <ul class="list-group">
-            <li *ngFor="let account of accounts" class="list-group-item account-item" (click)="selectAccount(account.id)">
-              <i [ngClass]="{
-                'pi pi-university': account.accountType === 'Savings',
-                'pi pi-wallet': account.accountType === 'Checking',
-                'pi pi-piggy-bank': account.accountType === 'Investment'
-              }"></i>
+            <li
+              *ngFor="let account of accounts"
+              class="list-group-item account-item"
+              (click)="selectAccount(account.id)"
+            >
+              <i
+                [ngClass]="{
+                  'pi pi-university': account.accountType === 'Savings',
+                  'pi pi-wallet': account.accountType === 'Checking',
+                  'pi pi-piggy-bank': account.accountType === 'Investment'
+                }"
+              ></i>
               {{ account.accountNumber }}
             </li>
           </ul>
@@ -46,11 +71,70 @@
               <h3>รายละเอียดบัญชี: {{ selectedAccount.accountName }}</h3>
             </div>
             <div class="card-body">
-              <p>เลขบัญชี: {{ selectedAccount.accountNumber }}</p>
-              <p>ยอดเงินคงเหลือ: {{ selectedAccount.balance | currency:'THB' }}</p>
-              <p>วันที่เปิดบัญชี: {{ selectedAccount.openingDate | date:'dd/MM/yyyy' }}</p>
-              <p>ประเภทบัญชี: {{ selectedAccount.accountType }}</p>
-              <p>สถานะบัญชี: {{ selectedAccount.accountStatus }}</p>
+              <div class="account-detail-item">
+                <i class="pi pi-credit-card"></i> เลขบัญชี:
+                {{ selectedAccount.accountNumber }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-money-bill"></i> ยอดเงินคงเหลือ:
+                {{ selectedAccount.balance | currency : "THB" }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-calendar"></i> วันที่เปิดบัญชี:
+                {{ selectedAccount.openingDate | date : "dd/MM/yyyy" }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-tags"></i> ประเภทบัญชี:
+                {{ selectedAccount.accountType }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-check-circle"></i> สถานะบัญชี:
+                {{ selectedAccount.accountStatus }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-building"></i> สาขา:
+                {{ selectedAccount.branch }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-percentage"></i> อัตราดอกเบี้ย:
+                {{ selectedAccount.interestRate }}%
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-dollar"></i> สกุลเงิน:
+                {{ selectedAccount.currency }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-user"></i> ชื่อเจ้าของบัญชี:
+                {{ selectedAccount.ownerName }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-home"></i> ที่อยู่เจ้าของบัญชี:
+                {{ selectedAccount.ownerAddress }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-phone"></i> เบอร์โทรศัพท์เจ้าของบัญชี:
+                {{ selectedAccount.ownerPhone }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-envelope"></i> อีเมลเจ้าของบัญชี:
+                {{ selectedAccount.ownerEmail }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-users"></i> ผู้จัดการบัญชี:
+                {{ selectedAccount.accountManager }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-clock"></i> วันที่ทำธุรกรรมล่าสุด:
+                {{ selectedAccount.lastTransactionDate | date : "dd/MM/yyyy" }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-info-circle"></i> วัตถุประสงค์บัญชี:
+                {{ selectedAccount.accountPurpose }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-file-o"></i> หมายเหตุ:
+                {{ selectedAccount.accountNotes }}
+              </div>
             </div>
           </div>
         </div>

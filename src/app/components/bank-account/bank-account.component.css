@@ -60,6 +60,19 @@ nav.navbar .navbar-nav .nav-link:hover {
   color: white;
 }
 
+.account-detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.account-detail-item i {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #007bff;
+  min-width: 20px;
+}
+
 .account-details-header {
   background: #00294d;
 }

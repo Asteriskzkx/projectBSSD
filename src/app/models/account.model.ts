@@ -6,4 +6,15 @@ export interface Account {
     openingDate: Date;
     accountType: string;
     accountStatus: string;
+    branch: string;
+    interestRate: number;
+    currency: string;
+    ownerName: string;
+    ownerAddress: string;
+    ownerPhone: string;
+    ownerEmail: string;
+    accountManager: string;
+    lastTransactionDate: Date;
+    accountPurpose: string;
+    accountNotes: string;
 }
