@@ -1,0 +1,32 @@
+<body style="background: #94cdf7;">
+  <div class="d-xxl-flex justify-content-center align-items-center align-content-center justify-content-xxl-center align-items-xxl-center" style="display: flex;justify-content: center;align-items: center;min-height: 100vh;">
+    <div style="background: #00294d;border-radius: 10px;width: 800px; padding: 20px;">
+      <h2 style="color: var(--bs-body-bg);font-family: Prompt, sans-serif;margin-top: 20px;font-size: 34px;text-align: center;font-weight: bold;">บัญชีธนาคาร</h2>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <ul class="list-group">
+            <li *ngFor="let account of accounts" class="list-group-item" (click)="selectAccount(account.id)" style="background: #01427a; color: white;">
+              {{ account.accountNumber }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-8">
+          <div *ngIf="selectedAccount" class="card" style="background: #01427a; color: white;">
+            <div class="card-header" style="background: #00294d;">
+              <h3 style="color: white;">รายละเอียดบัญชี: {{ selectedAccount.accountNumber }}</h3>
+            </div>
+            <div class="card-body">
+              <p>ยอดเงินคงเหลือ: {{ selectedAccount.balance | currency:'THB' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button (click)="logout()" class="btn btn-danger btn-lg">ออกจากระบบ</button>
+      </div>
+    </div>
+  </div>
+</body>
