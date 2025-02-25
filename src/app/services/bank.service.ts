@@ -25,6 +25,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-01'),
       accountPurpose: 'ออมเงิน',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารกรุงเทพ',
     },
     {
       id: 2,
@@ -45,6 +46,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-02'),
       accountPurpose: 'ใช้จ่ายประจำวัน',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารกสิกรไทย',
     },
     {
       id: 3,
@@ -65,6 +67,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-03'),
       accountPurpose: 'เงินฝากประจำ',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารกรุงไทย',
     },
     {
       id: 4,
@@ -85,6 +88,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-04'),
       accountPurpose: 'ออมเงินระยะสั้น',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารทหารไทย',
     },
     {
       id: 5,
@@ -105,6 +109,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-05'),
       accountPurpose: 'ใช้จ่ายธุรกิจ',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารไทยพาณิชย์',
     },
     {
       id: 6,
@@ -125,6 +130,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-06'),
       accountPurpose: 'เงินฝากประจำระยะยาว',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารกรุงศรีอยุธยา',
     },
     {
       id: 7,
@@ -145,6 +151,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-07'),
       accountPurpose: 'ออมเงินสำหรับเด็ก',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารเกียรตินาคิน',
     },
     {
       id: 8,
@@ -165,6 +172,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-08'),
       accountPurpose: 'ใช้จ่ายสำหรับธุรกิจขนาดเล็ก',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารซีไอเอ็มบีไทย',
     },
     {
       id: 9,
@@ -185,6 +193,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-09'),
       accountPurpose: 'เงินฝากประจำระยะสั้น',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารทิสโก้',
     },
     {
       id: 10,
@@ -205,6 +214,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-10'),
       accountPurpose: 'ออมเงินสำหรับผู้สูงอายุ',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารธนชาต',
     },
     {
       id: 11,
@@ -225,6 +235,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-11'),
       accountPurpose: 'ใช้จ่ายสำหรับองค์กร',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารยูโอบี',
     },
     {
       id: 12,
@@ -245,6 +256,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-12'),
       accountPurpose: 'เงินฝากประจำระยะยาว',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารไอซีบีซี (ไทย)',
     },
     {
       id: 13,
@@ -265,6 +277,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-13'),
       accountPurpose: 'ออมเงินสำหรับนักศึกษา',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารกรุงเทพ',
     },
     {
       id: 14,
@@ -285,6 +298,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-14'),
       accountPurpose: 'ใช้จ่ายสำหรับบริษัท Startup',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารกรุงศรีอยุธยา',
     },
     {
       id: 15,
@@ -305,6 +319,7 @@ export class BankService {
       lastTransactionDate: new Date('2023-12-15'),
       accountPurpose: 'เงินฝากประจำสำหรับเกษียณ',
       accountNotes: 'ไม่มีหมายเหตุ',
+      bankName: 'ธนาคารไทยพาณิชย์',
     },
   ];
   getAccounts(): Account[] {

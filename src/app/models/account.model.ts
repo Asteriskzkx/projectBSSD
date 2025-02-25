@@ -17,4 +17,5 @@ export interface Account {
     lastTransactionDate: Date;
     accountPurpose: string;
     accountNotes: string;
+    bankName?: string;
 }

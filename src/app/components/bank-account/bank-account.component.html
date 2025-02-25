@@ -72,68 +72,55 @@
             </div>
             <div class="card-body">
               <div class="account-detail-item">
-                <i class="pi pi-credit-card"></i> เลขบัญชี:
-                {{ selectedAccount.accountNumber }}
+                <i class="pi pi-building"></i> ธนาคาร: {{ selectedAccount.bankName }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-money-bill"></i> ยอดเงินคงเหลือ:
-                {{ selectedAccount.balance | currency : "THB" }}
+                <i class="pi pi-credit-card"></i> เลขบัญชี: {{ selectedAccount.accountNumber }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-calendar"></i> วันที่เปิดบัญชี:
-                {{ selectedAccount.openingDate | date : "dd/MM/yyyy" }}
+                <i class="pi pi-money-bill"></i> ยอดเงินคงเหลือ: {{ selectedAccount.balance | currency:'THB' }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-tags"></i> ประเภทบัญชี:
-                {{ selectedAccount.accountType }}
+                <i class="pi pi-calendar"></i> วันที่เปิดบัญชี: {{ selectedAccount.openingDate | date:'dd/MM/yyyy' }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-check-circle"></i> สถานะบัญชี:
-                {{ selectedAccount.accountStatus }}
+                <i class="pi pi-tags"></i> ประเภทบัญชี: {{ selectedAccount.accountType }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-building"></i> สาขา:
-                {{ selectedAccount.branch }}
+                <i class="pi pi-check-circle"></i> สถานะบัญชี: {{ selectedAccount.accountStatus }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-percentage"></i> อัตราดอกเบี้ย:
-                {{ selectedAccount.interestRate }}%
+                <i class="pi pi-map-marker"></i> สาขา: {{ selectedAccount.branch }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-dollar"></i> สกุลเงิน:
-                {{ selectedAccount.currency }}
+                <i class="pi pi-percentage"></i> อัตราดอกเบี้ย: {{ selectedAccount.interestRate }}%
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-user"></i> ชื่อเจ้าของบัญชี:
-                {{ selectedAccount.ownerName }}
+                <i class="pi pi-dollar"></i> สกุลเงิน: {{ selectedAccount.currency }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-home"></i> ที่อยู่เจ้าของบัญชี:
-                {{ selectedAccount.ownerAddress }}
+                <i class="pi pi-user"></i> ชื่อเจ้าของบัญชี: {{ selectedAccount.ownerName }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-phone"></i> เบอร์โทรศัพท์เจ้าของบัญชี:
-                {{ selectedAccount.ownerPhone }}
+                <i class="pi pi-home"></i> ที่อยู่เจ้าของบัญชี: {{ selectedAccount.ownerAddress }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-envelope"></i> อีเมลเจ้าของบัญชี:
-                {{ selectedAccount.ownerEmail }}
+                <i class="pi pi-phone"></i> เบอร์โทรศัพท์เจ้าของบัญชี: {{ selectedAccount.ownerPhone }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-users"></i> ผู้จัดการบัญชี:
-                {{ selectedAccount.accountManager }}
+                <i class="pi pi-envelope"></i> อีเมลเจ้าของบัญชี: {{ selectedAccount.ownerEmail }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-clock"></i> วันที่ทำธุรกรรมล่าสุด:
-                {{ selectedAccount.lastTransactionDate | date : "dd/MM/yyyy" }}
+                <i class="pi pi-users"></i> ผู้จัดการบัญชี: {{ selectedAccount.accountManager }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-info-circle"></i> วัตถุประสงค์บัญชี:
-                {{ selectedAccount.accountPurpose }}
+                <i class="pi pi-clock"></i> วันที่ทำธุรกรรมล่าสุด: {{ selectedAccount.lastTransactionDate | date:'dd/MM/yyyy' }}
               </div>
               <div class="account-detail-item">
-                <i class="pi pi-file-o"></i> หมายเหตุ:
-                {{ selectedAccount.accountNotes }}
+                <i class="pi pi-info-circle"></i> วัตถุประสงค์บัญชี: {{ selectedAccount.accountPurpose }}
+              </div>
+              <div class="account-detail-item">
+                <i class="pi pi-file-o"></i> หมายเหตุ: {{ selectedAccount.accountNotes }}
               </div>
             </div>
           </div>
