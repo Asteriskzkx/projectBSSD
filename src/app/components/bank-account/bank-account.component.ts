@@ -35,6 +35,11 @@ export class BankAccountComponent implements OnInit {
     this.selectedAccount = this.bankService.getAccount(id);
   }
 
+  confirmLogout() {
+    if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
+      this.logout();
+    }
+  }
   logout() {
     this.authService.logout();
     this.router.navigate(['/login']);
