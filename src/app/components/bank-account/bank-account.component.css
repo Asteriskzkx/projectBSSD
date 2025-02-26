@@ -20,18 +20,21 @@ nav.navbar .navbar-nav .nav-link:hover {
 
 .main-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 56px);
   margin-top: 16px;
   margin-bottom: 16px;
   padding-top: 56px;
+  width: 100%;
 }
 
 .account-container {
   background: #00294d;
   border-radius: 10px;
-  width: 90%;
+  width: 95%;
+  max-width: 1200px;
   padding: 20px;
 }
 
@@ -48,6 +51,9 @@ nav.navbar .navbar-nav .nav-link:hover {
   background: #01427a;
   color: white;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .account-item:hover {
@@ -83,4 +89,44 @@ nav.navbar .navbar-nav .nav-link:hover {
 
 .rounded-image {
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .account-container h2 {
+    font-size: 28px;
+  }
+
+  .account-item {
+    font-size: 14px;
+  }
+
+  .account-details-header h3 {
+    font-size: 20px;
+  }
+
+  .account-detail-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .account-container {
+    padding: 10px;
+  }
+
+  .account-container h2 {
+    font-size: 24px;
+  }
+
+  .account-item {
+    font-size: 12px;
+  }
+
+  .account-details-header h3 {
+    font-size: 18px;
+  }
+
+  .account-detail-item {
+    font-size: 12px;
+  }
 }

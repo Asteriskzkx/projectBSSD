@@ -1,172 +1,44 @@
-<body style="background: #94cdf7">
-  <div
-    class="d-xxl-flex justify-content-center align-items-center align-content-center justify-content-xxl-center align-items-xxl-center"
-    style="
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    "
-  >
-    <div
-      class="align-content-center"
-      style="
-        width: 600px;
-        height: 650px;
-        background: #01427a;
-        border-radius: 10px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border: 2px none #2980b9;
-        border-top-style: none;
-        border-right-style: none;
-        border-bottom-style: none;
-        border-left-style: none;
-      "
-    >
+<body style="font-family: 'Kanit', sans-serif">
+  <div class="login-container">
+    <div class="login-left-panel">
       <img
-        class="rounded-circle d-xxl-flex m-auto justify-content-xxl-center align-items-xxl-center"
+        class="rounded-circle"
         src="assets/images/2.webp"
         width="256"
         height="256"
-        style="width: 256px; height: 256px"
       />
-      <p
-        style="
-          font-family: 'Prompt';
-          font-size: 30px;
-          color: var(--bs-body-bg);
-          font-weight: bold;
-          text-align: center;
-          margin-left: 24px;
-          margin-top: 15px;
-          margin-bottom: 15px;
-          margin-right: 24px;
-        "
-      >
-        ยินดีต้อนรับ พนักงานฝ่ายบัญชีและการเงิน
-      </p>
+      <p>ยินดีต้อนรับ พนักงานฝ่ายบัญชีและการเงิน</p>
     </div>
-    <div
-      style="
-        background: #00294d;
-        border-radius: 10px;
-        width: 450px;
-        height: 650px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border: 2px solid #2980b9;
-        border-top-style: none;
-        border-right-style: none;
-        border-bottom-style: none;
-        border-left-style: none;
-      "
-    >
+    <div class="login-right-panel">
       <form class="" (ngSubmit)="login()">
         <div>
-          <h2
-            style="
-              color: var(--bs-body-bg);
-              font-family: Prompt, sans-serif;
-              margin-top: 98px;
-              font-size: 34px;
-              text-align: center;
-              font-weight: bold;
-              border-style: none;
-              border-top-style: none;
-              border-right-style: none;
-              border-bottom-style: none;
-              border-bottom-color: rgb(255, 255, 255);
-              border-left-style: none;
-            "
-          >
-            ยินดีต้อนรับสู่ซอฟต์แวร์<br />ระบบธุรกิจ
-          </h2>
-          <p
-            style="
-              color: var(--bs-body-bg);
-              font-family: Prompt, sans-serif;
-              margin-top: -8px;
-              text-align: center;
-            "
-          >
-            เข้าสู่ระบบเพื่อเข้าถึงแดชบอร์ดของคุณ
-          </p>
+          <h2>ยินดีต้อนรับสู่ซอฟต์แวร์<br />ระบบธุรกิจ</h2>
+          <p>เข้าสู่ระบบเพื่อเข้าถึงแดชบอร์ดของคุณ</p>
         </div>
-        <div
-          class="mb-3"
-          style="
-            margin-top: 69px;
-            margin-right: 47px;
-            margin-left: 47px;
-            font-family: Inter, sans-serif;
-          "
-        >
-          <label
-            class="form-label"
-            style="
-              color: var(--bs-body-bg);
-              /* margin-right: 314px; */
-              font-family: Prompt, sans-serif;
-            "
-            >อีเมล หรือ ชื่อผู้ใช้</label
-          >
+        <div class="mb-3">
+          <label class="form-label">อีเมล หรือ ชื่อผู้ใช้</label>
           <input
             class="form-control"
             type="email"
             [(ngModel)]="user.username"
             name="username"
             placeholder="staff@bmail.com"
-            style="font-family: Prompt, sans-serif"
           />
         </div>
-        <div
-          class="mb-3"
-          style="
-            margin-right: 47px;
-            margin-left: 47px;
-            font-family: Inter, sans-serif;
-          "
-        >
-          <label
-            class="form-label"
-            style="
-              color: var(--bs-body-bg);
-              font-family: Prompt, sans-serif;
-              margin-right: 314px;
-              width: 60px;
-            "
-            >รหัสผ่าน</label
-          >
+        <div class="mb-3">
+          <label class="form-label">รหัสผ่าน</label>
           <input
             class="form-control"
             type="password"
             [(ngModel)]="user.password"
             name="password"
             placeholder="*********"
-            style="font-family: Prompt, sans-serif"
           />
         </div>
-        <div
-          style="
-            margin: -1px;
-            margin-left: 47px;
-            margin-right: 47px;
-            margin-top: -11px;
-            font-family: Inter, sans-serif;
-            color: var(--bs-body-bg);
-            width: 155px;
-            height: 0.9px;
-          "
-        ></div>
-        <div
-          class="mb-3"
-          style="margin-right: 47px; margin-left: 47px; margin-top: 13px"
-        >
+        <div class="mb-3">
           <button
-            class="btn btn-primary btn-lg d-block w-100"
+            class="btn btn-primary btn-lg d-block w-100 login-button"
             type="submit"
-            style="font-family: Prompt, sans-serif; background: #1a7fc1"
           >
             เข้าสู่ระบบ
           </button>

@@ -1,0 +1,112 @@
+body {
+  background: #94cdf7;
+  font-family: "Kanit", sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-left-panel {
+  width: 600px;
+  height: 650px;
+  background: #01427a;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+}
+
+.login-left-panel img {
+  display: block;
+  margin: auto;
+  width: 256px;
+  height: 256px;
+}
+
+.login-left-panel p {
+  font-family: "Prompt";
+  font-size: 30px;
+  color: var(--bs-body-bg);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-right-panel {
+  background: #00294d;
+  border-radius: 10px;
+  width: 450px;
+  height: 650px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  /* border: 2px solid #2980b9; */
+  min-height: 90vh;
+  /* padding-left: 1%;
+  padding-right: 1%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-right-panel h2 {
+  color: var(--bs-body-bg);
+  font-family: "Prompt", sans-serif;
+  margin-top: 98px;
+  font-size: 34px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-right-panel p {
+  color: var(--bs-body-bg);
+  font-family: "Prompt", sans-serif;
+  margin-top: -8px;
+  text-align: center;
+}
+
+.login-right-panel .form-label {
+  color: var(--bs-body-bg);
+  font-family: "Prompt", sans-serif;
+}
+
+.login-right-panel .form-control {
+  font-family: "Prompt", sans-serif;
+}
+
+.login-right-panel .login-button {
+  font-family: "Prompt", sans-serif;
+  background: #1a7fc1;
+}
+
+@media (max-width: 992px) {
+  .login-left-panel,
+  .login-right-panel {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .login-left-panel {
+    height: auto;
+    padding: 20px;
+  }
+
+  .login-right-panel {
+    height: auto;
+    padding: 20px;
+  }
+
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
